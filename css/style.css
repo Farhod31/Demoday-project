@@ -8,6 +8,10 @@
     margin: 0 auto;
 }
 
+.container2{
+    max-width: 1300px;
+    margin: 0 auto;
+}
 /* ----Header---- */
 
 .header{
@@ -113,7 +117,7 @@
 
 .category {
     
-    height: 230px;
+    height: 290px;
 }
 .category__body {
     height: 285px;
@@ -133,24 +137,104 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    
 }
 
 .category__item:hover{
+    flex-shrink: 0;
     border-radius: 4px;
     background: #1B1B1B;
-    width: 250px;
-    height: 428px;
-   
+    width: 238px;
+    height: 340px;
+    text-align: center;
     transform: scale(1.2);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 77px 40px 36px 40px;
+    padding: 40px 15px 40px 15px;
+    color: #FFF;
+
+    box-shadow: 4px 7px 8px 0px rgba(34, 60, 80, 0.2);    
+
+}
+
+.after-hover{
+    display: none;
+}
+.category__item:hover .after-hover{
+    display: block;
+    width: 77px;
+    height: 60px;
+}
+.category__item:hover .main-img{
+    display: none;
+}
+.category__item:hover .category__title{
+    color: #FFF;
+    font-size: 16px;
+    width: 145px;
+    
+}
+.category__item:hover .category__text{
+    font-size: 14px;
+    width: 180px;
+    margin-bottom: -10px;
+}
+.knew-price{
+    display: none;
+    
+}
+
+.category__item:hover .knew-price{
+    display: inline-block;
+    padding: 12px 10px;
+    margin-bottom: -17px;
+    width: 165px;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    font-family: "GT Eesti Pro Display";
+}
+
+.order-product{
+    display: none;
+}
+.category__item:hover .order-product{
+    display: inline-block;
+    padding: 12px 10px;
+    margin-bottom: -17px;
+    width: 165px;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    font-family: "GT Eesti Pro Display";
 }
 .category__img {
     margin-bottom: 24px;
+    position: relative;
 }
+
+.category__item:hover .category__img::before{
+    display: none;
+}
+
+.category__img::before{
+    content: "";
+    background: #E0E0E0;
+    opacity: 0.9;
+    width: 76px;
+    height: 1px;
+    position: absolute;
+    top: 55px;
+    left: 130px;
+    transform: rotate(90deg);
+}
+
+.category__img:last-child:before {
+    display: none;
+}
+
 .category__title {
     font-size: 18px;
     line-height: 21px;
@@ -207,20 +291,43 @@
     font-family: "GT Eesti Pro Display";
 }
 
+.line{
+    position: absolute;
+    left: -140px;
+    bottom: 50%;
+    width: 522px;
+    height: 1px;
+    transform: rotate(90deg);
+    opacity: 0.15;
+    background: #BCCAD2;
+}
+
 .about__subtitle {
     color: #8BAF13;
     font-size: 24px;
     font-weight: 400;
     text-decoration: none;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10);
- 
+    position: relative;
+}
+
+.about__subtitle::after{
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 50px;
+    height: 1px;
+    background-color: #8BAF13;
 }
 .about__title {
     font-size: 30px;
     color: #FFF;
     font-weight: 500;
     margin-top: 30px;
+    position: relative;
 }
+
 .about__text {
     color: #FFF;
     font-weight: 350;
@@ -230,5 +337,107 @@
     padding: 15px 35px;
     text-transform: uppercase;
 }
-.btn {
+
+/* ----Product---- */
+
+.products {
+    height: 100vh;
+    font-family: "GT Eesti Pro Display";
+}
+
+.pruduct__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 70px;
+    margin-bottom: 30px;
+}
+.product__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.product__title {
+    font-size: 30px;
+    color: #1C1C1C;
+    font-weight: 400;
+}
+.product__arrow {
+    display: flex;
+    gap: 10px;
+   
+}
+
+
+.arrow-left{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #fff;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.arrow-left:hover{
+    transform: scale(1.1);
+}
+
+.arrow-right{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: #fff;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+    
+}
+
+.arrow-right:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+.product__cards {
+    display: flex;
+    gap: 48px;
+}
+.cards-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: "GT Eesti Pro Display";
+}
+.cards-bg {
+    background-color: #fff;
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+
+    width: 264px;
+    height: 315px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.card-img{
+    width: 198px;
+    height: 154px;
+}
+.cards-title {
+    color: #1C1C1C;
+    font-weight: 300;
+
+}
+.cards-text {
 }
