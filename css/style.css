@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ----Header---- */
+
+.header{
+    background-image: url('../img/Bg-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 650px;
+    
+    font-family: "GT Eesti Pro Display";
+    
+}
+.black-bg{
+    position: absolute;
+    height: 100vh;
+}
+
+.header__list{
+    display: flex;
+    padding: 20px 0;
+    position: relative;
+    align-items: center;
+}
+
+.header__navbar {
+    display: flex;
+    gap: 23px;
+    list-style-type: none;
+    margin-right: 80px;
+}
+
+.navbar-item a{
+  text-decoration: none;
+  color: #fff;
+}
+.navbar-info {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    color: #fff;
+    align-items: center;
+}
+
+
+/* ----Header-Content---- */
+
+.header__content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 111px;
+    max-width: 695px;
+    
+}
+
+.content-subtitle{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 350;
+    letter-spacing: 0.48px
+}
+
+.content-title {
+    font-size: 64px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2.56px;
+    margin: 10px 0;
+}
+.content-text {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ----Btn---- */
+
+.btn{
+    font-size: 14px;
+    color: #fff;
+    background-color: #799A0D;
+    border: 1px solid #799A0D;
+    border-radius: 3px;
+
+    position: relative;
+    padding: 13px 20px;
+    width: 173px;
+    margin-top: 30px;
+    cursor: pointer;
+
+    transition: all .2s linear;
+    margin-bottom: 104px;
+}
+
+.btn:hover{
+    background-color: #3c4b0c;
+    color: #fff;
+}
+
+
+/* ----Category---- */
+
+.category {
+    
+    height: 230px;
+}
+.category__body {
+    height: 285px;
+    border-radius: 4px;
+    background: #FFF;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+    display: flex;
+    position: absolute;
+    top: 80%;
+
+}
+.category__item {
+    display: flex;
+    width: 238px;
+    padding: 47px 13px 27px 13px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.category__item:hover{
+    border-radius: 4px;
+    background: #1B1B1B;
+    width: 250px;
+    height: 428px;
+   
+    transform: scale(1.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 77px 40px 36px 40px;
+}
+.category__img {
+    margin-bottom: 24px;
+}
+.category__title {
+    font-size: 18px;
+    line-height: 21px;
+    color: #313131;
+    text-align: center;
+    font-weight: 700;
+    width: 185px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    font-family: "Roboto Condensed";
+}
+.first-title{
+    margin-bottom: -14px;
+}
+.last-title{
+    margin-bottom: -14px;
+
+}
+.category__text {
+    text-align: center;
+    line-height: 21px;
+    font-weight: 350;
+    font-family: "GT Eesti Pro Display";
+}
+
+
+
+/* ----About---- */
+
+.about{
+    background-image: url('../img/about/daraht.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 522px;
+    position: relative;
+}
+
+.about-bgBlack{
+    position: relative;
+    width: 710px;
+    height: 522px;
+}
+
+.about__item {
+    position: absolute;
+    top: 30%;
+    left: 335px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 770px;
+
+    font-family: "GT Eesti Pro Display";
+}
+
+.about__subtitle {
+    color: #8BAF13;
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.10);
+ 
+}
+.about__title {
+    font-size: 30px;
+    color: #FFF;
+    font-weight: 500;
+    margin-top: 30px;
+}
+.about__text {
+    color: #FFF;
+    font-weight: 350;
+    margin-top: 10px;
+}
+.button-about {
+    padding: 15px 35px;
+    text-transform: uppercase;
+}
+.btn {
+}
