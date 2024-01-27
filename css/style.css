@@ -137,7 +137,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    
+    transition: all .1s linear;
 }
 
 .category__item:hover{
@@ -411,14 +411,19 @@
 .product__cards {
     display: flex;
     gap: 48px;
+   
 }
 .cards-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-family: "GT Eesti Pro Display";
+    max-width: 263px;
+    margin-bottom: 70px;
 }
-.cards-bg {
+
+
+.cards-bg{
     background-color: #fff;
     box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
     border-radius: 10px;
@@ -426,18 +431,82 @@
     width: 264px;
     height: 315px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     margin-bottom: 15px;
+    transition: all .2s linear;
+}
+
+.cards-bg:hover{
+    transform: translate(0, 62px) scale(1.2, 1.4) translateZ(0);
+    position: relative;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card-img{
-    width: 198px;
-    height: 154px;
+    width: 242px;
+    height: 189px;
+}
+.cards-item:hover .card-img{
+   
 }
 .cards-title {
     color: #1C1C1C;
     font-weight: 300;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+
+.cards-text {
+    color: #1C1C1C;
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+}
+
+.card-btn{
+    display: none;
+}
+
+.cards-item:hover .card-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.footer{
+    background-color: #1C1C1C;
+    height: 235px;
+}
+
+.footer__body{
+   
+    display: flex;
+    
+    align-items: center;
 
 }
-.cards-text {
+
+.footer__item{
+    width: 242px;
+    
+    font-family: "GT Eesti Pro Display";
+}
+
+.footer__list{
+    color: #fff;
+    list-style-type: none;
+}
+
+.footer__title {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer__link {
 }
