@@ -3,6 +3,8 @@
     margin: 0;
 }
 
+
+
 .container{
     max-width: 1200px;
     margin: 0 auto;
@@ -18,14 +20,14 @@
     background-image: url('../img/Bg-header.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 650px;
+    min-height: 650px;
     
     font-family: "GT Eesti Pro Display";
     
 }
 .black-bg{
     position: absolute;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .header__list{
@@ -117,7 +119,7 @@
 
 .category {
     
-    height: 290px;
+    min-height: 290px;
 }
 .category__body {
     height: 285px;
@@ -275,7 +277,7 @@
 .about-bgBlack{
     position: relative;
     width: 710px;
-    height: 522px;
+    min-height: 500px;
 }
 
 .about__item {
@@ -341,7 +343,7 @@
 /* ----Product---- */
 
 .products {
-    height: 100vh;
+    min-height: 100vh;
     font-family: "GT Eesti Pro Display";
 }
 
@@ -437,22 +439,19 @@
     transition: all .2s linear;
 }
 
-.cards-bg:hover{
+/* .cards-bg:hover{
     transform: translate(0, 62px) scale(1.2, 1.4) translateZ(0);
     position: relative;
-
     
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 .card-img{
     width: 242px;
     height: 189px;
 }
-.cards-item:hover .card-img{
-   
-}
+
 .cards-title {
     color: #1C1C1C;
     font-weight: 300;
@@ -472,30 +471,35 @@
     display: none;
 }
 
-.cards-item:hover .card-btn{
+/* .cards-item:hover .card-btn{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     position: relative;
-}
+} */
 
 .footer{
     background-color: #1C1C1C;
-    height: 235px;
+    display: flex;
+    
+    min-height: 300px;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer__body{
-   
     display: flex;
-    
-    align-items: center;
+}
 
+.footer__logo img{
+    margin-bottom: 15px;
 }
 
 .footer__item{
     width: 242px;
-    
+    margin-top: 60px;
     font-family: "GT Eesti Pro Display";
+   
 }
 
 .footer__list{
@@ -507,6 +511,371 @@
     color: #FFF;
     font-size: 14px;
     font-weight: 400;
+    padding-bottom: 25px;
+}
+
+.footer__text{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 350;
+    letter-spacing: 0.28px;
+    position: relative;
+    
+}
+
+.footer__text::after{
+    content: "";
+    position: absolute;
+    width:160px;
+    left: 160px;
+    bottom: 30px;
+    height: 1px;
+    background-color: #BCCAD2;
+    opacity: 0.4;
+    transform: rotate(90deg)
+}
+
+.linef{
+    position: relative;
+    width:160px;
+    left: 80px;
+    top:37px;
+    height: 1px;
+    background-color: #BCCAD2;
+    opacity: 0.4;
+    transform: rotate(90deg)
+}
+
+.lineff{
+    position: relative;
+    width:160px;
+    left: 80px;
+    top:79px;
+    height: 1px;
+    background-color: #BCCAD2;
+    opacity: 0.4;
+    transform: rotate(90deg)
 }
 .footer__link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 350;
+    font-size: 14px;    
+    padding-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+}
+
+.footer__line{
+    width: 60px;
+    height: 1px;
+    background: #BCCAD2;
+}
+
+.footer__contac{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    font-size: 14px;
+}
+.footer__link:hover{
+    text-decoration: underline;
+}
+
+.footer__list{
+   
+}
+.form{
+  display: inline-flex;
+  
+}
+.input{    
+    border-radius: 3px 0px 0px 3px;
+    border-top: 1px solid #BCCAD2;
+    border-bottom: 1px solid #BCCAD2;
+    border-left: 1px solid #BCCAD2;
+    background: #fff;
+ 
+    text-align: center;
+    width: 134px;
+    height: 39px;
+    margin-top: 12px;
+    margin-left: -20px;
+}
+
+.input:focus{
+    outline: #377192;
+    border-color: #377192;
+
+}
+.footer__icon{
+    width: 20px;
+    height: 15px;
+    position: relative;
+    left: 24px;
+    top: 24px;
+    z-index: 1;
+    float: left;
+}
+
+
+
+.footer__btn{
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+    text-transform: uppercase;
+    padding: 13px 10px;
+    margin-top: 11px;
+    border-radius: 0px 3px 3px 0px;
+    margin-left: -15px;
+    width: 140px;
+    font-size: 12px;
+}
+
+.footer__text1{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 350;
+    letter-spacing: 0.28px;
+}
+
+.footer__line{
+    /* width:250px;
+    height: 1px;
+    transform: rotate(90deg);
+    margin-top: 140px;
+    background: #BCCAD2;
+    opacity: 0.4; */
+}
+
+
+
+
+/* Popup */
+
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popup.open{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup__content{
+    transform: perspective(600px) translate(0px, 0%) rotate(0deg);
+    opacity: 1;
+}
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+.popup__content {
+    background-image: url("../icons/popup/f.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #1B1B1B;
+    
+    max-width:690px;
+    height: 555px;
+    padding: 30px;
+    position: relative;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.popup__del{
+    display: flex;
+    width: 600px;
+    font-family: "GT Eesti Pro Display";
+}
+
+.popup-hi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    max-width: 300px;
+    padding: 0 36px;
+}
+
+.popup__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    background: #fff;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.popup__close:hover{
+    transform: scale(1.1);
+}
+.popup__title {
+    color: #1C1C1C;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 33.5px;
+
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.popup__undertitle {
+    color: #1C1C1C;
+    text-align: center;
+    font-weight: 350;
+    line-height: 20px;
+    margin-bottom: 25px;
+    width: 300px;
+}
+
+.popup__input{
+    display: flex;
+    width: 295px;
+    height: 50px;
+    padding: 10px 10px 10px 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #BCCAD2;
+    background: #fff;
+    position: relative;
+}
+
+.popup__chel{
+    position: relative;
+    bottom: 44px;
+    z-index: 1;
+    float: left;
+    right: 115px;
+}
+
+.popup__input.popup__chel:focus-within {
+    display: none;
+}
+
+/* .popup__input::before{
+    content: "";
+    position: absolute;
+    top: 50px;
+    background-image: url('../icons/popup/chel.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+
+} */
+.popup__btn{
+    display: flex;
+    width: 295px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    background: #799A0D;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.popup__picture{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  min-height: 555px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0px 10px 10px 0px;
+  background: #FBFBFB;
+
+  box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.10);
+
+}
+.popup__picture img {
+    width: 255px;
+    height: 180px;
+}
+.popup__rightTitle {
+    font-size: 18px;
+    color: #313131;
+    text-align: center;
+    font-weight: 700;
+    line-height: 118%;
+    letter-spacing: 0.36px;
+    padding-top: 21px;
+    font-family: "Roboto Condensed";
+    text-transform: uppercase;
+}
+
+.popup__rightText{
+    text-align: center;
+    font-weight: 350;
+    line-height: 20px;
+}
+
+.popup__checkbox{
+    display: flex;
+}
+
+.ckc{
+    border-radius: 2px;
+    border: 1px solid #BCCAD2;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+
+    
+}
+
+.chek{
+    margin-left: 10px;
+    font-size: 11px;
+    font-weight: 350;
+    line-height: 17px;
+    color: #1C1C1C;
 }

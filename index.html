@@ -9,11 +9,15 @@
 </head>
 <body>
     <!-- ----Header -->
+
+    <div class="wrapper">
+
+    
     <header class="header">
         <img class="black-bg" src="./img/bg-blackHeader.svg" alt="">
         <div class="container">
             <nav class="header__list">
-                <a href="ilm.html" class="logo">
+                <a href="" class="logo">
                     <img src="./icons/logo-andNavbars/logo.svg" alt="Logo">
                 </a>
                 <ul class="header__navbar">
@@ -40,7 +44,7 @@
     </header>  <!-- Header---- -->
     
     <!-- ---Main -->
-    <main>
+    <main class="main">
         <!-- ----Category -->
         <section>
             <div class="category">
@@ -50,7 +54,7 @@
                             <div class="category__img"><img class="after-hover" src="./icons/after-hover/first.svg" alt="C1"><img class="main-img" src="./img/category-header/c1.svg" alt="C1"></div>
                             <div class="category__title"><p class="first-title">Пиловочник хвойных пород</p></div>
                             <div class="category__text"><p>Сегодня этот текст используют практически все дизайнеры, набирающие рыбу латиницей.</p></div>
-                            <a class="btn knew-price">узнать цену</a>
+                            <a href="#popup" class="btn knew-price popup__link">узнать цену</a>
                         </div>
                         <div class="category__item">
                             <div class="category__img"><img class="after-hover" src="./icons/after-hover/second.svg" alt=""><img class="main-img" src="./img/category-header/c2.svg" alt="C1"></div>
@@ -82,6 +86,40 @@
         </section><!-- Category---- -->
 
 
+        <!-- Popup -->
+
+        <div class="popup" id="popup">
+            <div class="popup__body">
+                <div class="popup__content">
+                    <div class="popup__del">
+                        <div class="popup-hi">
+                            <a href="" class="popup__close close-popup"><img src="./icons/popup/xx.svg" alt=""></a>
+                            <div class="popup__title">Заполните форму</div>
+                            <div class="popup__undertitle">И в ближайшее время сотрудник нашей компании свяжется с Вами</div>
+        
+                            <form class="popup__form">
+                                <input class="popup__input" type="text" placeholder="Имя">
+                                <img class="popup__chel" src="./icons/popup/chel.svg" alt="">
+                                <input class="popup__input" type="tel" placeholder="Телефон">
+                                <input class="popup__input" type="email" placeholder="Email">
+                                <button class="btn popup__btn">отправить</button>
+                                <div class="popup__checkbox">
+                                    <input class="ckc" type="checkbox">
+                                    <p class="chek" >Отправляя эту форму, вы даете свое согласие на обработку персональных данных в соответствии с нашей Политикой конфиденциальности.</p>
+                                </div>
+                            </form>
+                        </div>
+
+                        
+                        <div class="popup__picture">
+                            <img src="./img/popup/Rounded rectangle.png" alt="">
+                            <div class="popup__rightTitle">Пиловочник хвойных пород</div>
+                            <p class="popup__rightText">Сегодня этот текст используют практически все дизайнеры.</p>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- ----About -->
 
         <section>
@@ -171,14 +209,16 @@
             <div class="container">
                 <div class="footer__body">
                     <div class="footer__item">
-                        <a href=""><img src="./icons/logo-andNavbars/logo.svg" alt="Logo"></a>
+                        <a href="" class="footer__logo"><img src="./icons/logo-andNavbars/logo.svg" alt="Logo"></a>
                         <div class="footer__text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p></div>
                     </div>
-                    
+                
 
+                  
                     <div class="footer__item">
                         <ul class="footer__list">
                             <h3 class="footer__title">ПРОДУКЦИЯ</h3>
+                            <hr class="linef">
                             <li><a class="footer__link" href="">Пиловочник</a></li>
                             <li><a class="footer__link" href="">Уголь</a></li>
                             <li><a class="footer__link" href="">Пиломатериалы</a></li>
@@ -186,9 +226,12 @@
                             <li><a class="footer__link" href="">Тех. Дрова</a></li>
                         </ul>
                     </div>
+                  
 
+                 
                     <div class="footer__item">
                         <ul class="footer__list">
+                            <hr class="lineff">
                             <h3 class="footer__title">Информация</h3>
                             <li><a class="footer__link" href="">О Компании</a></li>
                             <li><a class="footer__link" href="">Доставка и Оплата</a></li>
@@ -196,18 +239,31 @@
                         </ul>
                     </div>
                     
+                
                     <div class="footer__item">
                         <ul class="footer__list">
                             <h3 class="footer__title">КОНТАКТЫ</h3>
-                            <li><a class="footer__link" href="">info@form.com</a></li>
-                            <li><a class="footer__link" href="">882-587-3025</a></li>
-                            <li><a class="footer__link" href="">6116 Willa River Suite 610</a></li>
+                            <li class="footer__contac">info@form.com</li>
+                            <li class="footer__contac">882-587-3025</li>
+                            <li class="footer__contac">6116 Willa River Suite 610</li>
                         </ul>
+                    </div>
+
+                    <div class="footer__item">
+                        <h3 class="footer__title">ПОДПИСАТЬСЯ НА НОВОСТИ</h3>
+                        <p class="footer__text1">Duis autem vel eum</p>
+                        <form class="form">
+                            <img class="footer__icon" src="./icons/footer/Почта 1.svg" alt="">
+                            <input class="input" type="email" placeholder="Email">
+                            <button class="btn footer__btn">Оставить заявку</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+    </div>
     <script src="./js/script.js"></script>
 </body>
 </html>
