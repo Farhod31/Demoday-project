@@ -1,67 +1,154 @@
-const popupLink = document.querySelectorAll('.popup__link');
-const body = document.querySelector('body');
-const lockPadding = document.querySelector('.lock-padding')
+const popup = document.querySelector('.popup');
+const headerPopup = document.querySelector('.header-popup');
+const popupTexdrev = document.querySelector('.popuptexdrev');
+const popilPup = document.querySelector('.popil');
 
 
-let unlock = true;
+const btnPopup = document.querySelector('.btn');
 
-const timeout = 800;
+const popupLink = document.querySelector('.knew-price');
+const popilBtn = document.querySelector('.popil-btn');
+const poptexdrev1 = document.querySelector('.poptexdrevv');
 
-
-if (popupLink.length > 0) {
-    for (let index = 0; index < popupLink.length; index++) {
-        const popupLinks = popupLink[index];
-        popupLinks.addEventListener('click', function(e) {
-            const popupName = popupLinks.getAttribute('href').replace('#', '');
-            const curentPopup = document.getElementById(popupName);
-            popupOpen(curentPopup);
-            e.preventDefault();
-        })
-    }
-}
+const popupClose = document.querySelector('.popup__close');
+const popClose1 = document.querySelector('.pop__close');
+const popTexdrevClose = document.querySelector('.poptexdrev__close');
+const popilClose = document.querySelector('.poptexdrev__close');
 
 
-const popupCloseIcon = document.querySelectorAll('.close-popup');
+// const lockPadding = document.querySelector('.lock-padding')
 
-if (popupCloseIcon.length > 0) {
-    for (let index = 0; index < popupCloseIcon.length; index++) {
-        const el = popupCloseIcon[index];
-        el.addEventListener('click', function(e) {
-            popupClose(el.closest('.popup'));
-            e.preventDefault();
-        })
-    }
-}
+btnPopup.addEventListener('click', function (e) {
+    document.body.style.overflowY = 'hidden';
+    headerPopup.classList.add('active')
+    e.preventDefault();
+})
 
-
-function popupOpen(curentPopup) {
-    if (curentPopup && unlock) {
-        const popupActive = document.querySelector('.popup.open');
-        if (popupActive) {
-            popupClose(popupActive, false);
-        }else{
-            // bodyLock();
-        }
-        curentPopup.classList.add('open');
+popClose1.addEventListener('click', function(e) {
+    document.body.style.overflowY = 'visible';
+    headerPopup.classList.remove('active')
+    e.preventDefault();
+})
 
 
-        curentPopup.addEventListener('click', function (e) {
-            if (!e.target.closest('.popup__content')) {
-                popupClose(e.target.closest('.popup'))
-            }
-        });
-    }
-}
 
-function popupClose(popupActive, doUnlock = true) {
-    if (unlock) {
-        popupActive.classList.remove('open');
+popupLink.addEventListener('click', function (e) {
+    document.body.style.overflowY = 'hidden';
+    popup.classList.add('active')
+    e.preventDefault();
+})
 
-        if (doUnlock) {
-            // bodyUnLock();
-        }
-    }
-}
+
+popupClose.addEventListener('click', function(e) {
+    document.body.style.overflowY = 'visible';
+    popup.classList.remove('active')
+    e.preventDefault();
+})
+
+
+popilBtn.addEventListener('click', function (e) {
+    document.body.style.overflowY = 'hidden';
+    popilPup.classList.add('active')
+    e.preventDefault();
+})
+
+popilClose.addEventListener('click', function(e) {
+    document.body.style.overflowY = 'visible';
+    popilPup.classList.remove('active')
+    e.preventDefault();
+})
+
+
+
+poptexdrev1.addEventListener('click', function (e) {
+    document.body.style.overflowY = 'hidden';
+    popupTexdrev.classList.add('active')
+    e.preventDefault();
+})
+
+popTexdrevClose.addEventListener('click', function(e) {
+    document.body.style.overflowY = 'visible';
+    popupTexdrev.classList.remove('active')
+    e.preventDefault();
+})
+
+
+// popupLink.onclick = function(e) {
+//     popup.style.display = 'block';
+//     e.preventDefault();
+// }
+
+// popupClose.onclick = function(e){
+//     popup.style.display = 'none'
+//     e.preventDefault();
+// }
+
+
+// let disableScroll = function () {
+//     let paddingOfSet = window.innerWidth;
+
+//     console.log(paddingOfSet);
+// } 
+// let unlock = true;
+
+// const timeout = 800;
+
+
+// if (popupLink.length > 0) {
+//     for (let index = 0; index < popupLink.length; index++) {
+//         const popupLinks = popupLink[index];
+//         popupLinks.addEventListener('click', function(e) {
+//             const popupName = popupLinks.getAttribute('href').replace('#', '');
+//             const curentPopup = document.getElementById(popupName);
+//             popupOpen(curentPopup);
+//             e.preventDefault();
+//         })
+//     }
+// }
+
+
+
+// const popupCloseIcon = document.querySelectorAll('.close-popup');
+
+// if (popupCloseIcon.length > 0) {
+//     for (let index = 0; index < popupCloseIcon.length; index++) {
+//         const el = popupCloseIcon[index];
+//         el.addEventListener('click', function(e) {
+//             popupClose(el.closest('.popup'));
+//             e.preventDefault();
+//         })
+//     }
+// }
+
+
+// function popupOpen(curentPopup) {
+//     if (curentPopup && unlock) {
+//         const popupActive = document.querySelector('.popup.open');
+//         if (popupActive) {
+//             popupClose(popupActive, false);
+//         }else{
+//             // bodyLock();
+//         }
+//         curentPopup.classList.add('open');
+
+
+//         curentPopup.addEventListener('click', function (e) {
+//             if (!e.target.closest('.popup__content')) {
+//                 popupClose(e.target.closest('.popup'))
+//             }
+//         });
+//     }
+// }
+
+// function popupClose(popupActive, doUnlock = true) {
+//     if (unlock) {
+//         popupActive.classList.remove('open');
+
+//         if (doUnlock) {
+//             // bodyUnLock();
+//         }
+//     }
+// }
 
 // function bodyLock() {
 //     const lockPaddingValue = window.innerWidth - document.querySelector('.main').offsetWidth + 'px';
@@ -105,9 +192,9 @@ function popupClose(popupActive, doUnlock = true) {
 // }
 
 
-document.addEventListener('keydown', function(e){
-    if (e.which === 27) {
-        const popupActive = document.querySelector('.popup.open')
-        popupClose(popupActive)
-    }
-});
+// document.addEventListener('keydown', function(e){
+//     if (e.which === 27) {
+//         const popupActive = document.querySelector('.popup.open')
+//         popupClose(popupActive)
+//     }
+// });

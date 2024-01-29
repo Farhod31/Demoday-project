@@ -195,7 +195,36 @@
     width: 165px;
     text-transform: uppercase;
     font-size: 12px;
+    text-decoration: none;
+    font-family: "GT Eesti Pro Display";
+}
 
+.popil-btn{
+    display: none;
+}
+.category__item:hover .popil-btn{
+    display: inline-block;
+    padding: 12px 10px;
+    margin-bottom: -17px;
+    width: 165px;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: "GT Eesti Pro Display";
+}
+
+.poptexdrevv{
+    display: none;
+}
+
+.category__item:hover .poptexdrevv{
+    display: inline-block;
+    padding: 12px 10px;
+    margin-bottom: -17px;
+    width: 165px;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-decoration: none;
     font-family: "GT Eesti Pro Display";
 }
 
@@ -669,6 +698,7 @@
     background: rgba(0, 0, 0, 0.50);
     top: 0;
     left: 0;
+    z-index: 1;
     opacity: 0;
     visibility: hidden;
     overflow-y: auto;
@@ -676,12 +706,19 @@
     transition: all 0.8s ease 0s;
 }
 
-.popup.open{
+.popup.active{
     opacity: 1;
     visibility: visible;
 }
 
-.popup.open .popup__content{
+/* 
+
+.popup.open{
+    opacity: 1;
+    visibility: visible;
+} */
+
+.popup.active .popup__content{
     transform: perspective(600px) translate(0px, 0%) rotate(0deg);
     opacity: 1;
 }
@@ -774,11 +811,11 @@
     display: flex;
     width: 295px;
     height: 50px;
-    padding: 10px 10px 10px 45px;
+    padding: 10px 10px 10px 50px;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 10px;
+    
     border-radius: 4px;
     border: 1px solid #BCCAD2;
     background: #fff;
@@ -787,7 +824,23 @@
 
 .popup__chel{
     position: relative;
-    bottom: 44px;
+    bottom: 35px;
+    z-index: 1;
+    float: left;
+    right: 115px;
+}
+
+.popup__tel{
+    position: relative;
+    bottom: 35px;
+    z-index: 1;
+    float: left;
+    right: 115px;
+}
+
+.poch{
+    position: relative;
+    bottom: 32px;
     z-index: 1;
     float: left;
     right: 115px;
@@ -868,8 +921,6 @@
     background: #fff;
     width: 20px;
     height: 20px;
-
-    
 }
 
 .chek{
@@ -879,3 +930,351 @@
     line-height: 17px;
     color: #1C1C1C;
 }
+
+
+/* header-popup */
+
+.header-popup{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.header-popup.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.pop__body{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.pop__content{
+    background-image: url("../icons/popup/f.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #1B1B1B;
+    
+    max-width:690px;
+    height: 555px;
+    padding: 30px;
+    position: relative;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.pop__del{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    font-family: "GT Eesti Pro Display";
+}
+
+.pop-hi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    max-width: 300px;
+    padding: 0 36px;
+}
+
+.pop__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pop__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    background: #fff;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.pop__close:hover{
+    transform: scale(1.1);
+}
+
+.politic-kofeg{
+    text-decoration: underline;
+    text-decoration-color: #1B1B1B;
+}
+
+/* Popil */
+
+.popil {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+.popil.active{
+    opacity: 1;
+    visibility: visible;
+}
+.popil.active .popil__content{
+    transform: perspective(600px) translate(0px, 0%) rotate(0deg);
+    opacity: 1;
+}
+.popil__body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+.popil__content {
+    background-image: url("../icons/popup/f.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #1B1B1B;
+    
+    max-width:690px;
+    height: 555px;
+    padding: 30px;
+    position: relative;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}
+.popil__del {
+    display: flex;
+    width: 600px;
+    font-family: "GT Eesti Pro Display";
+}
+.popil-hi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    max-width: 300px;
+    padding: 0 36px;
+}
+.popil__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    background: #fff;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.popil__close:hover{
+    transform: scale(1.1);
+}
+
+.popil__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popil__picture {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    min-height: 555px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0px 10px 10px 0px;
+    background: #FBFBFB;
+  
+    box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.popil__picture {
+    width: 258px;
+    height: 185.802px;  
+}
+.popil__rightTitle {
+    font-size: 18px;
+    color: #313131;
+    text-align: center;
+    font-weight: 700;
+    line-height: 118%;
+    letter-spacing: 0.36px;
+    padding-top: 21px;
+    font-family: "Roboto Condensed";
+    text-transform: uppercase;
+}
+
+
+/* .popup-texdrev */
+
+.popuptexdrev {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+.popuptexdrev.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popuptexdrev.active .poptexdrev__content{
+    transform: perspective(600px) translate(0px, 0%) rotate(0deg);
+    opacity: 1;
+}
+.poptexdrev__body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+.poptexdrev__content {
+    background-image: url("../icons/popup/f.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #1B1B1B;
+    
+    max-width:690px;
+    height: 555px;
+    padding: 30px;
+    position: relative;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.poptexdrev__del{
+    display: flex;
+    width: 600px;
+    font-family: "GT Eesti Pro Display";
+}
+.poptexdrev-hi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    max-width: 300px;
+    padding: 0 36px;
+}
+
+.poptexdrev__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.poptexdrev__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    background: #fff;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.poptexdrev__close:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+.poptexdrev__picture{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    min-height: 555px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0px 10px 10px 0px;
+    background: #FBFBFB;
+  
+    box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.poptexdrev__picture img{
+    width: 258px;
+    height: 185.802px;
+}
+.poptexdrev__rightTitle {
+    font-size: 18px;
+    color: #313131;
+    text-align: center;
+    font-weight: 700;
+    line-height: 118%;
+    letter-spacing: 0.36px;
+    padding-top: 21px;
+    font-family: "Roboto Condensed";
+    text-transform: uppercase;
+}
+
+
+
+
