@@ -1,30 +1,40 @@
-const popup = document.querySelector('.popup');
 const headerPopup = document.querySelector('.header-popup');
-const popupTexdrev = document.querySelector('.popuptexdrev');
-const popilPup = document.querySelector('.popil');
-
-
-const btnPopup = document.querySelector('.btn');
-
-const popupLink = document.querySelector('.knew-price');
-const popilBtn = document.querySelector('.popil-btn');
-const poptexdrev1 = document.querySelector('.poptexdrevv');
-
+const btnPopups = document.querySelector('.btn');
 const popupClose = document.querySelector('.popup__close');
-const popClose1 = document.querySelector('.pop__close');
+
+const popup = document.querySelector('.popup');
+const popupLink = document.querySelector('.knew-price');
+const popClose = document.querySelector('.pop__close');
+
+
+const popilPup = document.querySelector('.popil');
+const popilBtn = document.querySelector('.popil-btn');
+const popilClose = document.querySelector('.popil__close');
+
+const popupTexdrev = document.querySelector('.popuptexdrev');
+const poptexdrev1 = document.querySelector('.poptexdrevv');
 const popTexdrevClose = document.querySelector('.poptexdrev__close');
-const popilClose = document.querySelector('.poptexdrev__close');
+
+// footer
+const pilovochnik = document.querySelector('.typeee');
+const footerPop = document.querySelector('.footer__btn');
+const texdrevesini = document.querySelector('.textdrevi')
+
+const polimaterial = document.querySelector('.popppil');
 
 
-// const lockPadding = document.querySelector('.lock-padding')
 
-btnPopup.addEventListener('click', function (e) {
+
+
+// btn
+
+btnPopups.addEventListener('click', function (e) {
     document.body.style.overflowY = 'hidden';
     headerPopup.classList.add('active')
     e.preventDefault();
 })
 
-popClose1.addEventListener('click', function(e) {
+popClose.addEventListener('click', function(e) {
     document.body.style.overflowY = 'visible';
     headerPopup.classList.remove('active')
     e.preventDefault();
@@ -32,18 +42,19 @@ popClose1.addEventListener('click', function(e) {
 
 
 
+// Category
 popupLink.addEventListener('click', function (e) {
     document.body.style.overflowY = 'hidden';
     popup.classList.add('active')
     e.preventDefault();
 })
 
-
 popupClose.addEventListener('click', function(e) {
     document.body.style.overflowY = 'visible';
     popup.classList.remove('active')
     e.preventDefault();
 })
+
 
 
 popilBtn.addEventListener('click', function (e) {
@@ -71,6 +82,36 @@ popTexdrevClose.addEventListener('click', function(e) {
     popupTexdrev.classList.remove('active')
     e.preventDefault();
 })
+
+
+
+// Footer
+pilovochnik.addEventListener('click', function (e) {
+    document.body.style.overflowY = 'hidden';
+    popup.classList.add('active')
+    e.preventDefault();
+})
+
+polimaterial.addEventListener('click', function (e) {
+    document.body.style.overflowY = 'hidden';
+    popilPup.classList.add('active')
+    e.preventDefault();
+})
+
+texdrevesini.addEventListener('click', function (e) {
+    document.body.style.overflowY = 'hidden';
+    popupTexdrev.classList.add('active')
+    e.preventDefault();
+})
+
+
+footerPop.addEventListener('click', function (e) {
+    document.body.style.overflowY = 'hidden';
+    headerPopup.classList.add('active')
+    e.preventDefault();
+})
+
+
 
 
 // popupLink.onclick = function(e) {

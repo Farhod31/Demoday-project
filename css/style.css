@@ -1,9 +1,12 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
 }
 
-
+body{
+    transition: all .5s linear;
+}
 
 .container{
     max-width: 1200px;
@@ -11,7 +14,7 @@
 }
 
 .container2{
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 /* ----Header---- */
@@ -47,6 +50,10 @@
 .navbar-item a{
   text-decoration: none;
   color: #fff;
+}
+
+.navbar-item a:hover{
+    text-decoration: underline;
 }
 .navbar-info {
     display: flex;
@@ -104,7 +111,7 @@
     width: 173px;
     margin-top: 30px;
     cursor: pointer;
-
+    text-decoration: none;
     transition: all .2s linear;
     margin-bottom: 104px;
 }
@@ -113,6 +120,9 @@
     background-color: #3c4b0c;
     color: #fff;
 }
+
+
+/* Media */
 
 
 /* ----Category---- */
@@ -365,19 +375,20 @@
     margin-top: 10px;
 }
 .button-about {
-    padding: 15px 35px;
+    padding: 15px 42px;
     text-transform: uppercase;
 }
 
 /* ----Product---- */
 
 .products {
-    min-height: 100vh;
+    min-height: 85vh;
     font-family: "GT Eesti Pro Display";
 }
 
 .pruduct__label {
     display: flex;
+    
     justify-content: space-between;
     align-items: center;
     padding-top: 70px;
@@ -441,51 +452,54 @@
 
 .product__cards {
     display: flex;
+    flex-wrap: wrap;
     gap: 48px;
    
 }
 .cards-item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     font-family: "GT Eesti Pro Display";
     max-width: 263px;
-    margin-bottom: 70px;
-}
-
-
-.cards-bg{
+    
     background-color: #fff;
-    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+    
     border-radius: 10px;
 
     width: 264px;
     height: 315px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     margin-bottom: 15px;
     transition: all .2s linear;
 }
 
+.cards-bg{
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+    margin-bottom: 10px;
+}
+.cards-item:hover {
+    transform: scale(1.1, 1) translateZ(0);
+    height: 380px;
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+
 /* .cards-bg:hover{
     transform: translate(0, 62px) scale(1.2, 1.4) translateZ(0);
+  
     position: relative;
+
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
 } */
-.card-img{
-    width: 242px;
-    height: 189px;
-}
+
 
 .cards-title {
     color: #1C1C1C;
     font-weight: 300;
     margin-bottom: 10px;
     position: relative;
+    padding-left: 10px;
 }
 
 
@@ -494,18 +508,24 @@
     font-size: 18px;
     font-weight: 400;
     position: relative;
+    padding-left: 10px;
 }
 
 .card-btn{
     display: none;
+    margin-bottom: 0;
 }
 
-/* .cards-item:hover .card-btn{
+.cards-item:hover .card-btn{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    margin-bottom: 0px;
     position: relative;
-} */
+    padding: 15px 40px;
+    font-size: 12px;
+    margin-left: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
 .footer{
     background-color: #1C1C1C;
@@ -518,6 +538,7 @@
 
 .footer__body{
     display: flex;
+    gap: 18px;
 }
 
 .footer__logo img{
@@ -525,7 +546,7 @@
 }
 
 .footer__item{
-    width: 242px;
+   
     margin-top: 60px;
     font-family: "GT Eesti Pro Display";
    
@@ -541,6 +562,7 @@
     font-size: 14px;
     font-weight: 400;
     padding-bottom: 25px;
+    text-transform: uppercase;
 }
 
 .footer__text{
@@ -549,42 +571,23 @@
     font-weight: 350;
     letter-spacing: 0.28px;
     position: relative;
-    
+    width: 300px;
 }
 
 .footer__text::after{
     content: "";
     position: absolute;
     width:160px;
-    left: 160px;
-    bottom: 30px;
+    left: 210px;
+    bottom: 15px;
     height: 1px;
     background-color: #BCCAD2;
     opacity: 0.4;
     transform: rotate(90deg)
 }
 
-.linef{
-    position: relative;
-    width:160px;
-    left: 80px;
-    top:37px;
-    height: 1px;
-    background-color: #BCCAD2;
-    opacity: 0.4;
-    transform: rotate(90deg)
-}
 
-.lineff{
-    position: relative;
-    width:160px;
-    left: 80px;
-    top:79px;
-    height: 1px;
-    background-color: #BCCAD2;
-    opacity: 0.4;
-    transform: rotate(90deg)
-}
+
 .footer__link {
     color: #fff;
     text-decoration: none;
@@ -599,13 +602,39 @@
     position: relative;
 }
 
-.footer__line{
-    width: 60px;
+.footer__line2{
+    position: relative;
+}
+.footer__line2::after{
+    content: "";
+    position: absolute;
+    top: 130px;
+    left: -55px;
+    width: 160px;
     height: 1px;
-    background: #BCCAD2;
+    background-color: #BCCAD2;
+    opacity: 0.4;
+    transform: rotate(90deg);
 }
 
+.footer__line{
+    position: relative;
+}
+.footer__line::after{
+    content: "";
+    position: absolute;
+    top: 130px;
+    left: -55px;
+    width: 160px;
+    height: 1px;
+    background-color: #BCCAD2;
+    opacity: 0.4;
+    transform: rotate(90deg);
+}
+
+
 .footer__contac{
+    
     padding-bottom: 10px;
     display: flex;
     flex-direction: column;
@@ -617,31 +646,42 @@
     text-decoration: underline;
 }
 
-.footer__list{
-   
-}
+
 .form{
-  display: inline-flex;
-  
+  display:flex;
+
+  align-items: flex-start;
+  margin-left: 40px;
 }
 .input{    
     border-radius: 3px 0px 0px 3px;
     border-top: 1px solid #BCCAD2;
     border-bottom: 1px solid #BCCAD2;
     border-left: 1px solid #BCCAD2;
-    background: #fff;
+    background-color: #fff;
  
     text-align: center;
-    width: 134px;
-    height: 39px;
+    width: 95px;
+    height: 35px;
     margin-top: 12px;
-    margin-left: -20px;
+   position: relative;
+}
+
+.input::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../icons/footer/pochta.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
 }
 
 .input:focus{
     outline: #377192;
     border-color: #377192;
-
 }
 .footer__icon{
     width: 20px;
@@ -659,14 +699,14 @@
     display: inline-flex;
     align-items: center;
     text-align: center;
-    justify-content:center;
+    justify-content: center;
     text-transform: uppercase;
-    padding: 13px 10px;
-    margin-top: 11px;
+    padding: 12px 9px;
+    margin-top: 10px;
     border-radius: 0px 3px 3px 0px;
-    margin-left: -15px;
-    width: 140px;
-    font-size: 12px;
+   
+    width: 160px;
+    font-size: 11px;
 }
 
 .footer__text1{
@@ -1133,7 +1173,7 @@
     box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.10);
 }
 
-.popil__picture {
+.popil__picture img {
     width: 258px;
     height: 185.802px;  
 }
@@ -1278,3 +1318,592 @@
 
 
 
+/*  About company*/
+.header-about {
+    
+    font-family: "GT Eesti Pro Display";
+}
+
+.headerA-list {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    background-color:  #Fff;
+    height: 72px;
+}
+
+.headerA-item{
+    display: flex;
+}
+.navbarA-item{
+    list-style-type: none;
+}
+.navbarA-item a{
+    color: #1C1C1C;
+    text-decoration: none;
+}
+.navbarA-item a:hover{
+    text-decoration: underline;
+}
+.navbarA-info {
+    color: #1C1C1C;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.headerA__navbar{
+    gap: 25px;
+    display: flex;
+    align-items: center;
+    color: #1B1B1B;
+}
+.headerA-listt{
+    display: flex;
+    
+}
+
+.navbarA-info{
+    display: flex;
+    gap: 20px;
+}
+.headerA-btn {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+/* HeaderA-under */
+.headerA-under{
+    background-color: #1c1c1c;
+    height: 72px;
+    display: flex;
+    align-items: center;
+}
+.underA-body {
+   
+}
+.underA-item li {
+    list-style-type: none;
+
+}
+.underA-item a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.underA-item a:hover{
+    text-decoration: underline;
+}
+.underA-item{
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+.underA-text {
+}
+.headerA-input {
+    width: 216px;
+    padding: 8px 15px;
+    
+    border-radius: 61px;
+    background-color: #fff;
+    position: relative;
+}
+
+.headerA-input::before{
+    content: "";
+    position: absolute;
+    background-image: url('../icons/about/l1.svg');
+    width: 15px;
+    height: 15px;
+}
+
+.headerA-input:focus{
+    outline: #BCCAD2;
+    border-color: #BCCAD2;
+}
+.underA-text{
+    color: #FBFBFB;
+    font-size: 15px;
+}
+
+
+/* Banner */
+
+.banner {
+    background-image: url('../img/about/banner1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #BCCAD2;;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    height: 200px;
+    display: flex;
+    align-items: center;
+
+    font-family: "GT Eesti Pro Display";
+}
+.banner__about {
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.banner__text{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.28px;
+}
+.banner__green {
+    color: #799A0D;
+    text-decoration: none;
+}
+
+.banner__green:hover{
+    text-decoration: underline;
+}
+
+
+/* invest */
+
+
+.invest {
+    margin: 0 auto;
+    max-width: 1315px;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    font-family: "GT Eesti Pro Display";
+}
+
+.invest__item {
+    margin-bottom: 45px;
+}
+.invest__title {
+    margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #1C1C1C;
+    letter-spacing: 0.48px;
+}
+.invest__text {
+    margin-bottom: 22px;
+    font-size: 18px;
+    font-weight: 350;
+    color: #1C1C1C;
+}
+
+.ivest-line{
+    display: flex;
+    width: 438px;
+    height: 1px;
+    background-color: #BCCAD2;
+    position: relative;
+}
+
+.ivest-line::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 92px;
+    height: 3px;
+    background-color: #799A0D;
+}
+.invest__body {
+    font-family: "GT Eesti Pro Display";
+}
+
+.invest__img {
+    float: right;
+    padding-left: 45px;
+    width: 298px;
+    border-radius: 5px;
+    height: 277px;
+    position: relative;
+    cursor: pointer;
+}
+.lupa{
+    position: absolute;
+    right: 200px;
+    width: 45px;
+    height: 45px;
+    bottom: -16px;
+    padding: 15px;
+    border-radius: 100px;
+    background-color: #fff;
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+
+}
+
+.investT1{
+    text-align: justify;
+    padding-bottom: 30px;
+    font-weight: 350;
+    color: #1C1C1C;
+    width: 955px;
+    font-size: 18px;
+}
+.investT2{
+    font-weight: 350;
+    color: #1C1C1C;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.invetext1{
+    padding-bottom: 15px;
+}
+.invetext2{
+    padding-bottom: 15px;
+}
+
+.invetext3{
+    padding-bottom: 15px;
+}
+
+.invetext4{
+    padding-bottom: 15px;
+}
+
+.invetext5{
+    padding-bottom: 15px;
+}
+
+
+
+.popupdoc{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popupdoc.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.popupdoc.active .popupdoc__content {
+    transform: perspective(600px) translate(0px, 0%) rotate(0deg);
+    opacity: 1;
+}
+.popupdoc__body{
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.popupdoc__content {
+    background-image: url("../img/about/ser.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #1B1B1B;
+    
+    width: 490px;
+    height: 701px;
+    padding: 30px;
+    position: relative;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.popupdoc-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    background-color: #799A0D;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.10);
+}
+
+.popupdoc-close:hover{
+    transform: scale(1.1);
+}
+
+
+
+/* catalog */
+
+.banner-catalog{
+    margin-bottom: 50px;
+}
+
+.cards-itemcatalog{
+    height:380px;
+    
+}
+
+
+/* Delivery */
+
+.howworks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "GT Eesti Pro Display";
+    margin-bottom: 30px;
+}
+
+.howworks__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 63px;
+}
+
+.howworks__text {
+    font-weight: 350;
+    line-height: 23px;
+    color: rgb(61, 61, 61);
+    width: 446px;
+    text-align: center;
+}
+.howworks-number{
+    display: flex;
+    justify-content: space-between;
+}
+.howworks-number img{
+    position: relative;
+    top: 30px;
+}
+
+.number-2{
+    position: relative;
+    right: 90px;
+}
+.number-3{
+    position: relative;
+    right: 15%;
+}
+.howworks-catalog{
+    margin-bottom: 70px;
+}
+.howworks-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+.howworks-item{
+    width: 360px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    position: relative;
+    border-radius: 10px;
+    /* Карточки */
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.howworks-item h3{
+    position: relative;
+    margin-bottom: 20px;
+}
+.howworks-item h3::after{
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 53px;
+    width: 52px;
+    height: 1px;
+    background-color:  rgb(28, 28, 28);
+}
+
+.howworks-itemText{
+    width: 312px;
+    text-align: center;
+}
+
+/* pay */
+
+.pay {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.pay-item {
+    width: 575px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.5);
+    transition: all .2s linear;
+}
+
+.pay-item h3{
+    position: relative;
+}
+
+.pay-item h3::after{
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 53px;
+    width: 52px;
+    height: 1px;
+    background-color:  rgb(28, 28, 28);
+}
+
+.pay-item:hover{
+    transform: scale(1.1);
+}
+
+.pay-item  img{
+    margin-bottom: 20px;
+}
+
+.pay-text{
+    margin-top: 20px;
+}
+
+
+/* Office */
+
+.office {
+    font-family: GT Eesti Pro Display;
+}
+
+.office__body {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 70px;
+}
+.office__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.office__title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.office-part{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.office__text {
+    font-weight: 350;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+}
+.office__map img {
+    width: 789px;
+    height: 389px;
+}
+
+.office-line{
+    width: 438px;
+    height: 1px;
+    background-color: #BCCAD2;
+    margin-bottom:40px;
+    position: relative;
+}
+
+.office-line::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 92px;
+    height: 3px;
+    background-color: #799A0D;
+}
+
+
+.office__titlee {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.office-linee{
+    width: 438px;
+    height: 1px;
+    background-color: #BCCAD2;
+    margin-bottom:70px;
+    position: relative;
+    display: flex;
+}
+
+.office-linee::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    width: 92px;
+    height: 3px;
+    background-color: #799A0D;
+}
+
+.recvisit{
+   
+  margin-bottom: 70px;
+}
+
+.recvisit__body{
+    margin-left: -50px;
+}
+
+.recvisit-bg {
+    position: static;
+    width: 100%;
+    height: 215px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.1);
+
+    background: rgb(255, 255, 255);
+}
+.recvisit-part1 {
+    font-weight: 350;
+    line-height: 30px;
+}
+.recvisit-part2 {
+    font-weight: 350;
+    line-height: 30px;
+}

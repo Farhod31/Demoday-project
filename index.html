@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лесозаготовка</title>
     <link rel="stylesheet" href="./fonts/DD Eesti/stylesheet.css">
     <link rel="stylesheet" href="./fonts/Roboto/stylesheet.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -17,9 +18,9 @@
                     <img src="./icons/logo-andNavbars/logo.svg" alt="Logo">
                 </a>
                 <ul class="header__navbar">
-                    <li class="navbar-item"><a href="about.html">О Компании</a></li>
-                    <li class="navbar-item"><a href="delivery.html">Доставка и Оплата</a></li>
-                    <li class="navbar-item"><a href="contact.html">Контакты</a></li>
+                    <li class="navbar-item"><a href="./pages/about.html">О Компании</a></li>
+                    <li class="navbar-item"><a href="./pages/delivery.html">Доставка и Оплата</a></li>
+                    <li class="navbar-item"><a href="./pages/contact.html">Контакты</a></li>
                 </ul>
                 <ul class="navbar-info">
                     <li><img src="./icons/logo-andNavbars/clock.svg" alt=""></li>
@@ -39,7 +40,7 @@
         </div>  
     </header>  <!-- Header---- -->
     <!-- Popup-header -->
-    <div class="header-popup" id="popup">
+    <div class="header-popup" id="wow">
         <div class="pop__body">
             <div class="pop__content">
                 <div class="pop__del">
@@ -83,13 +84,13 @@
                             <div class="category__img"><img class="after-hover" src="./icons/after-hover/second.svg" alt=""><img class="main-img" src="./img/category-header/c2.svg" alt="C1"></div>
                             <div class="category__title"><p>Уголь древесный</p></div>
                             <div class="category__text"><p>Сегодня этот текст используют практически все дизайнеры, набирающие рыбу латиницей.</p></div>
-                            <a class="btn order-product">список продукции</a>
+                            <a class="btn order-product" href="./pages/catalog.html">список продукции</a>
                         </div>
                         <div class="category__item">
                             <div class="category__img"><img class="after-hover" src="./icons/after-hover/third.svg" alt=""><img class="main-img" src="./img/category-header/c3.svg" alt="C1"></div>
                             <div class="category__title"><p>Пиломатериалы</p></div>
                             <div class="category__text"><p>Сегодня этот текст используют практически все дизайнеры, набирающие рыбу латиницей.</p></div>
-                            <a class="btn popil-btn">узнать цену</a>
+                            <a class="btn popil-btn" href="#">узнать цену</a>
                         </div>
                         <div class="category__item">
                             <div class="category__img"><img class="after-hover" src="./icons/after-hover/cc4.svg" alt="C4"><img class="main-img" src="./img/category-header/c4.svg" alt="C1"></div>
@@ -234,7 +235,7 @@
                         <p class="about__title">Quam adipisci velit, sed quia numquam eius modi tempora incidunt!</p>
                         <p class="about__text">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia est.</p>
                         
-                        <button class="btn button-about">подробнее</button>
+                        <a class="btn button-about" href="./pages/about.html">подробнее</a>
                     </div>
                 </div>
             </div>
@@ -250,8 +251,8 @@
                         </div>
                        
                         <div class="product__arrow">
-                            <a class="arrow-left" href=""><img src="./icons/arrow/left.svg" alt="leftArrow"></a> 
-                            <a class="arrow-right" href=""><img src="./icons/arrow/right.svg" alt="rightArrow"></a>
+                            <a class="arrow-left" href="./pages/catalog.html"><img src="./icons/arrow/left.svg" alt="leftArrow"></a> 
+                            <a class="arrow-right" href="./pages/catalog.html"><img src="./icons/arrow/right.svg" alt="rightArrow"></a>
                         </div>
                     </div>
 
@@ -263,7 +264,7 @@
                             </div>
                             <p class="cards-title">Уголь древесный</p>
                             <p class="cards-text">Уголь для промышленных предприятий мелкой фракции</p>
-                            <button class="btn card-btn">узнать цену</button>
+                            <a class="btn card-btn" href="./pages/catalog.html">узнать цену</a>
                             
                         </div>
                         <div class="cards-item">
@@ -274,7 +275,7 @@
                             
                             <p class="cards-title">Уголь древесный</p>
                             <p class="cards-text">Уголь для промышленных предприятий мелкой фракции</p>
-                            <button class="btn card-btn">узнать цену</button>
+                            <a class="btn card-btn" href="./pages/catalog.html">узнать цену</a>
                         
                         </div>
                         <div class="cards-item">
@@ -284,7 +285,7 @@
                            
                             <p class="cards-title">Уголь древесный</p>
                             <p class="cards-text">Уголь для промышленных предприятий мелкой фракции</p>
-                            <button class="btn card-btn">узнать цену</button>
+                            <a class="btn card-btn" href="./pages/catalog.html">узнать цену</a>
                           
                         </div>
                         <div class="cards-item">
@@ -294,7 +295,7 @@
                            
                                 <p class="cards-title">Уголь древесный</p>
                                 <p class="cards-text">Уголь для промышленных предприятий мелкой фракции</p>
-                                <button class="btn card-btn">узнать цену</button>
+                                <a class="btn card-btn" href="./pages/catalog.html">узнать цену</a>
                            
                         </div>
                     </div>
@@ -316,35 +317,63 @@
                     <div class="footer__item">
                         <ul class="footer__list">
                             <h3 class="footer__title">ПРОДУКЦИЯ</h3>
-                            <li><a class="footer__link" href="">Пиловочник</a></li>
-                            <li><a class="footer__link" href="">Уголь</a></li>
-                            <li><a class="footer__link" href="">Пиломатериалы</a></li>
-                            <li><a class="footer__link" href="">Европоддоны</a></li>
-                            <li><a class="footer__link" href="">Тех. Дрова</a></li>
+                            <li><a class="typeee footer__link" href="">Пиловочник</a></li>
+                            <li><a class="footer__link" href="./pages/catalog.html">Уголь</a></li>
+                            <li><a class="popppil footer__link" href="#">Пиломатериалы</a></li>
+                            <li><a class="footer__link" href="./pages/catalog.html">Европоддоны</a></li>
+                            <li><a class="textdrevi footer__link" href="#">Тех. Дрова</a></li>
                         </ul>
                     </div>
                   
+                    <span class="footer__line2"></span>
                     <div class="footer__item">
                         <ul class="footer__list">
                             <h3 class="footer__title">Информация</h3>
-                            <li><a class="footer__link" href="">О Компании</a></li>
-                            <li><a class="footer__link" href="">Доставка и Оплата</a></li>
-                            <li><a class="footer__link" href="">Контакты</a></li>
+                            <li><a class="footer__link" href="./pages/about.html">О Компании</a></li>
+                            <li><a class="footer__link" href="./pages/delivery.html">Доставка и Оплата</a></li>
+                            <li><a class="footer__link" href="./pages/contact.html">Контакты</a></li>
                         </ul>
                     </div>
-                    
+                    <span class="footer__line"></span>
                     <div class="footer__item">
                         <ul class="footer__list">
                             <h3 class="footer__title">КОНТАКТЫ</h3>
                             <li><a class="footer__link" href="">info@form.com</a></li>
                             <li><a class="footer__link" href="">882-587-3025</a></li>
                             <li><a class="footer__link" href="">6116 Willa River Suite 610</a></li>
+                            
+
                         </ul>
+                    </div>
+
+                    <div class="footer__item">
+                        <ul class="footer__list">
+                            <h3 class="footer__title">ПОДПИСАТЬСЯ НА НОВОСТИ</h3>
+                            <p class="footer__text1">Duis autem vel eum</p>
+                        </ul>
+                        <form class="form">
+                            <input placeholder="email" class="input" type="email">
+                            <button class="btn footer__btn">Оставить заявку</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+
+
+
+<!-- Окно с карточкой -->
+    <div id="cardModal" class="modal">
+      <div class="modal-content">
+        <h2 id="cardTitle"></h2>
+        <button id="yesButton">Да</button>
+        <button id="noButton">Нет</button>
+      </div>
+    </div>
+
+
+
     <script src="./js/script.js"></script>
 </body>
 </html>
