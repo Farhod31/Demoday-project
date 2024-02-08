@@ -1,19 +1,18 @@
-// button's info
 const headerPopup = document.querySelector('.header-popup');
 const btnPopups = document.querySelectorAll('.btn');
 const popClose = document.querySelectorAll('.pop__close');
 
-// catalog's tree
 const popup = document.querySelector('.popup');
-const popupLink = document.querySelector('.typeee');
+const popupLink = document.querySelectorAll('.typeee');
 const popupClose = document.querySelector('.popup__close');
 
 const popupTexdrev = document.querySelector('.popuptexdrev');
-const poptexdrev1 = document.querySelector('.textdrevi');
+const poptexdrev1 = document.querySelectorAll('.textdrevi');
 const popTexdrevClose = document.querySelector('.poptexdrev__close');
 
+
 const popilPup = document.querySelector('.popil');
-const popilBtn = document.querySelector('.popppil');
+const popilBtn = document.querySelectorAll('.popppil');
 const popilClose = document.querySelector('.popil__close');
 
 
@@ -37,15 +36,24 @@ popupDocClose.addEventListener('click', function(e) {
     e.preventDefault();
 })
 
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        popupDocument.classList.remove('active')
+    }
+})
 
-// catalog's tree----------
 
 // popup1
-popupLink.addEventListener('click', function (e) {
-    document.body.style.overflowY = 'hidden';
-    popup.classList.add('active')
-    e.preventDefault();
-})
+
+
+popupLink.forEach(element => {
+    element.addEventListener('click', function (e) {
+        document.body.style.overflowY = 'hidden';
+        popup.classList.add('active')
+        e.preventDefault();
+    })
+});
 
 popupClose.addEventListener('click', function(e) {
     document.body.style.overflowY = 'visible';
@@ -53,13 +61,22 @@ popupClose.addEventListener('click', function(e) {
     e.preventDefault();
 })
 
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        popup.classList.remove('active')
+    }
+})
+
 // popup2
 
-poptexdrev1.addEventListener('click', function (e) {
-    document.body.style.overflowY = 'hidden';
-    popupTexdrev.classList.add('active')
-    e.preventDefault();
-})
+poptexdrev1.forEach(poptex => {
+    poptex.addEventListener('click', function (e) {
+        document.body.style.overflowY = 'hidden';
+        popupTexdrev.classList.add('active')
+        e.preventDefault();
+    })
+});
 
 popTexdrevClose.addEventListener('click', function(e) {
     document.body.style.overflowY = 'visible';
@@ -67,12 +84,21 @@ popTexdrevClose.addEventListener('click', function(e) {
     e.preventDefault();
 })
 
-
-popilBtn.addEventListener('click', function (e) {
-    document.body.style.overflowY = 'hidden';
-    popilPup.classList.add('active')
-    e.preventDefault();
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        popupTexdrev.classList.remove('active')
+    }
 })
+
+
+popilBtn.forEach(popil => {
+    popil.addEventListener('click', function (e) {
+        document.body.style.overflowY = 'hidden';
+        popilPup.classList.add('active')
+        e.preventDefault();
+    })
+});
 
 popilClose.addEventListener('click', function(e) {
     document.body.style.overflowY = 'visible';
@@ -80,9 +106,12 @@ popilClose.addEventListener('click', function(e) {
     e.preventDefault();
 })
 
-
-
-// button's info-------
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        popilPup.classList.remove('active')
+    }
+})
 
 // Header-popup
 
@@ -102,4 +131,13 @@ popClose.forEach(element => {
         e.preventDefault();
     })    
 });
+
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        headerPopup.classList.remove('active')
+    }
+})
+
 

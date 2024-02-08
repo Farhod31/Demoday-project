@@ -33,6 +33,12 @@ popupClose.addEventListener('click', function(e) {
     e.preventDefault();
 })
 
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        popup.classList.remove('active')
+    }
+})
 // popup2
 
 poptexdrev1.forEach(poptex => {
@@ -49,6 +55,15 @@ popTexdrevClose.addEventListener('click', function(e) {
     e.preventDefault();
 })
 
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        popupTexdrev.classList.remove('active')
+    }
+})
+
+// popup3
+
 popilBtn.forEach(popil => {
     popil.addEventListener('click', function (e) {
         document.body.style.overflowY = 'hidden';
@@ -63,6 +78,12 @@ popilClose.addEventListener('click', function(e) {
     e.preventDefault();
 })
 
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        popilPup.classList.remove('active')
+    }
+})
 
 // Header-popup
 
@@ -83,3 +104,9 @@ popClose.forEach(element => {
     })    
 });
 
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.body.style.overflowY = 'visible';
+        headerPopup.classList.remove('active')
+    }
+})

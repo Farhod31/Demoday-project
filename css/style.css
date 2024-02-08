@@ -572,6 +572,7 @@ body{
     letter-spacing: 0.28px;
     position: relative;
     width: 300px;
+    
 }
 
 .footer__text::after{
@@ -709,22 +710,19 @@ body{
     font-size: 11px;
 }
 
+.footer__btn:focus{
+    outline: none;
+    border-color: transparent;
+}
+
+
+
 .footer__text1{
     color: #fff;
     font-size: 14px;
     font-weight: 350;
     letter-spacing: 0.28px;
 }
-
-.footer__line{
-    /* width:250px;
-    height: 1px;
-    transform: rotate(90deg);
-    margin-top: 140px;
-    background: #BCCAD2;
-    opacity: 0.4; */
-}
-
 
 
 
@@ -751,12 +749,6 @@ body{
     visibility: visible;
 }
 
-/* 
-
-.popup.open{
-    opacity: 1;
-    visibility: visible;
-} */
 
 .popup.active .popup__content{
     transform: perspective(600px) translate(0px, 0%) rotate(0deg);
@@ -1369,6 +1361,11 @@ body{
 .headerA-btn {
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.headerA-btn:focus{
+    outline: none;
+    border-color: transparent;
 }
 
 
